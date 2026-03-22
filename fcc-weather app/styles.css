@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #32a852;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+  font-size: 1.25em;
+  font-family: sans-serif;
+}
+
+.btn-wrap {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #6cd488;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .btn-wrap {
+    flex-direction: column;
+  }
+}
+
+.btn-wrap > span {
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+}
+
+.btn-wrap > span::first-letter {
+  font-size: 1.3em;
+}
+
+#location-selector {
+  width: 200px;
+  height: 50px;
+  font-size: 1.25em;
+}
+
+#get-weather-btn {
+  font-size: 1.25em;
+  height: 50px;
+  width: 200px;
+}
+
+.weather-info-wrap {
+  min-width: 100%;
+  max-width: 700px;
+  min-height: 300px;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+#weather-info {
+  display: block;
+  font-family: sans-serif;
+  padding: 20px 0;
+}
+
+#location {
+  font-size: 1.875em;
+}
+
+.primary-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  font-size: 1.5625em;
+}
+
+.primary-info-left {
+  display: flex;
+  align-items: center;
+}
+
+.primary-info-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.secondary-info {
+  margin: 40px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.secondary-info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.secondary-info-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.secondary-info-bottom-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: space-evenly;
+}
+
+.secondary-info-bottom-right {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+#compass-arrow {
+  width: 3px;
+  height: 60px;
+  position: absolute;
+  background-color: black;
+}
+
+#compass-arrow {
+  width: 4px;
+  height: 70px;
+  top: 15%;
+  position: absolute;
+  background-color: black;
+}
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-left-color: black;
+  position: absolute;
+  top: -15%;
+  left: -6px;
+  transform: rotate(-90deg);
+}
+
+.compass-direction {
+  position: absolute;
+  background-color: black;
+}
+
+.north,
+.south {
+  width: 3px;
+  height: 8px;
+  left: 50%;
+}
+
+.east,
+.west {
+  width: 8px;
+  height: 3px;
+  top: 50%;
+}
+
+.north {
+  top: -8px;
+}
+
+.south {
+  bottom: -8px;
+}
+
+.east {
+  right: -8px;
+}
+
+.west {
+  left: -8px;
+}
